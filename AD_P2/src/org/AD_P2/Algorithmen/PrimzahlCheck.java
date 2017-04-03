@@ -1,12 +1,15 @@
 package org.AD_P2.Algorithmen;
 
-public class PrimzahlCheck {
+import org.AD_P2.Counter.Counter;
 
-	public static boolean primzahlen(int n) {
+public class PrimzahlCheck extends Counter {
+
+	public boolean primzahlen(int n) {
 
 		boolean flag = true;
 
 		for (int j = 2; j < n; j++) {
+			count();
 			if ((n % j == 0) && (j != n)) {
 				flag = false;
 			}

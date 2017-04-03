@@ -1,17 +1,21 @@
 package org.AD_P2.Algorithmen;
 
-public class LangsameSuche {
+import org.AD_P2.Counter.Counter;
 
-	public static Boolean[] primzahlen(int n) {
+public class LangsameSuche extends Counter {
+
+	public Boolean[] primzahlen(int n) {
 
 		Boolean a[] = new Boolean[n];
 
 		for (int i = 0; i < n; i++) {
-			a[i] = true ;
+			a[i] = true;
 		}
 
 		for (int i = 2; i < n; i++) {
+			count();
 			for (int j = 2; j < n; j++) {
+				count();
 				if ((i % j == 0) && (j != i)) {
 					a[i] = false;
 				}

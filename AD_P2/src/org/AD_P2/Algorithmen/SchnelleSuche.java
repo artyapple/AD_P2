@@ -1,8 +1,10 @@
 package org.AD_P2.Algorithmen;
 
-public class SchnelleSuche {
+import org.AD_P2.Counter.Counter;
 
-	public static Boolean[] primzahlen(int n) {
+public class SchnelleSuche extends Counter {
+
+	public Boolean[] primzahlen(int n) {
 
 		Boolean a[] = new Boolean[n];
 
@@ -11,7 +13,9 @@ public class SchnelleSuche {
 		}
 
 		for (int i = 2; i < n; i++) {
+			count();
 			for (int j = 2; j < i; j++) {
+				count();
 				if ((i % j == 0) && (j != i)) {
 					a[i] = false;
 				}
